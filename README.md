@@ -128,6 +128,8 @@ To get real performance values for this models, it was applied cross-validation 
 * **RMSE** (Root Mean Squared Error)
 * **MPE** (Mean Percentage Error)
 
+<div align="center">
+   
 |       Model Name          |        MAE CV       |    MAPE CV    |      RMSE CV       |
 |:-------------------------:|:-------------------:|:-------------:|:------------------:|
 | Linear Regression         |  2081.73 +/- 295.63 | 0.30 +/- 0.02 | 2952.52 +/- 468.37 |
@@ -135,17 +137,21 @@ To get real performance values for this models, it was applied cross-validation 
 | Random Forest Regressor   |  837.78 +/- 218.38  | 0.12 +/- 0.02 | 1256.5 +/- 319.25  |
 | XGBoost Regressor         |  1074.84 +/- 199.67 | 0.15 +/- 0.02 | 1540.63 +/- 278.07 |
 
+</div>
+   
 According to the results, the best two models were Random Forest Regressor and XGBoost Regressor. As the XGBoost Regressor is a lighter model than the Random Forest and gives good results too, it was chosen to be the model to be used in production.
 
 For the hyperparameter fine tuning, it was used the random search strategy, because it's faster than the grid and bayesian search. Its performance increased as follows:
 
+<div align="center">
+   
 |       Model Name          |          MAE        |      MAPE     |        RMSE        |
 |:-------------------------:|:-------------------:|:-------------:|:------------------:|
 | XGBoost Regressor         |  670.08905	      |    0.098361   |          966.11029 |
 
+</div>
 
-
-## 4.1. BUSINESS PERFORMANCE
+## 4.2. BUSINESS PERFORMANCE
 
 The model's performance was translated to business performance using the evaluated metrics along with the predicted revenue for the next six weeks.
 
@@ -157,6 +163,8 @@ The metrics meanings for the business performance are as follows:
 
 With these values I was able to calculate the best and worst scenario in terms of revenue, by adding and subtracting the MAE value to the prediction, respectively, as follows:
 
+<div align="center">
+
 |  store  |    predictions   |   worst_scenario  |   best_scenario |    MAE   |   MAPE |   
 |:-------:|:----------------:|:-----------------:|:---------------:|:--------:|:------:|           
 |  112	  | 223963.23        |	223378.54        |	224547.92      |  584.68  |	0.089  |
@@ -164,8 +172,11 @@ With these values I was able to calculate the best and worst scenario in terms o
 |  370	  |	299569.31        |	298799.77        |	300338.84      |  769.53  |	0.099  |
 |  183	  |	163555.82        |	162358.62        |	164753.03      |  1197.20 | 0.150  |
 
+</div>
+
 And the most difficult stores to predict the revenue based on the MAPE values are as follows:
 
+<div align="center">
 
 |  store  |    predictions   |    MAE   |   MAPE |   
 |:-------:|:----------------:|:--------:|:------:|       
@@ -175,14 +186,19 @@ And the most difficult stores to predict the revenue based on the MAPE values ar
 | 595	  | 389204.87	     | 3784.00  | 0.264  |
 | 722	  | 350199.31	     | 1916.30  | 0.257  |
 
+</div>
 
 The total performance of the model represented as the sum of the revenue for all stores are as follows:
+
+<div align="center">
 
 |  Scenario       |    Values        |    
 |:---------------:|:----------------:|    
 | predictions	  | R$285,701,696.00 |  
 | worst_scenario  |	R$284,950,541.82 |
 | best_scenario	  | R$286,452,822.01 | 
+   
+</div>
 
 # 5. DEPLOY
 
@@ -190,5 +206,6 @@ Two APIs were created to deploy the model in production. One to receive data and
 
 The user needs to send a message to the bot with "/" followed by the store's number, and the bot will return the predicted revenue for the next six weeks as follows:
 
-![alt text](img/telegram.gif)
-
+<p align="center">
+  <img src="img/telegram.gif" alt="animated" />
+</p>
