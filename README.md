@@ -22,9 +22,9 @@ The business problem can be defined by four topics as follows:
     * The CFO.
 
 * **The solution format**
-    * **Granularity:** Dailys sales for the next six weeks per Store
+    * **Granularity:** Dailys sales for the next six weeks per store
     * **Problem type:** Forecasting problem (Regression)
-    * **Delivery method:** Cell phone access by using Telegram.
+    * **Delivery method:** Cell phone access by using Telegram
 
 
 
@@ -72,37 +72,37 @@ The steps performed are as follows:
 1. **Business problem understanding**
     * Defining the motivation, problem's root cause, who is the stakeholder and the solution format.
 
-2. Data Description
+2. **Data Description**
     * Checking dimensions and data types to apply descriptive statistics methods to better understand the data fields and their characteristics;
     * Changing data types and filling NA's based on business assumptions. 
 
-3. Feature Engineering
+3. **Feature Engineering**
     * Creating new features and raising hypothesis to understand the phenomenon that is being modeled and it's agents.
 
-4. Data Filtering
+4. **Data Filtering**
     * Filtering rows and columns that are not relevant to solve the problem.
 
-5. Exploratory Data Analysis (EDA)
+5. **Exploratory Data Analysis (EDA)**
     * Validating the business hypothesis;
     * Selecting the most important features to the model.
 
-6. Data Preparation
+6. **Data Preparation**
     * Preparing the data to be used for the machine learning model
 
-7. Feature Selection
+7. **Feature Selection**
     * Selecting the most significant attributes to train the model.
 
-8. Machine Learning Modeling
+8. **Machine Learning Modeling**
     * Testing different machine learning models to compare performance and choose one of them to solve the problem. 
 
-9. Hyperparameter Fine Tuning
+9. **Hyperparameter Fine Tuning**
     * Fine tuning the model's hyperparameters to obtain a better performance;
     * Training the model.
 
-10. Error Interpretation
+10. **Error Interpretation**
     * Interpreting the erro's metrics (MAE, MAPE, RMSE and MPE) to convert to business language.
 
-11. Deploy Model to Production
+11. **Deploy Model to Production**
     * Deploying the model to a cloud service to be available for the stakeholder to consult the results by a Telegram bot.
 
 
