@@ -22,9 +22,12 @@ The business problem can be defined by four topics as follows:
     * The CFO.
 
 * **The solution format**
-    * **Granularity:** Dailys sales for the next six weeks per store
-    * **Problem type:** Forecasting problem (Regression)
-    * **Delivery method:** Cell phone access by using Telegram
+    * **Granularity:** 
+      * Dailys sales for the next six weeks per store
+    * **Problem type:** 
+      * Forecasting problem (Regression)
+    * **Delivery method:** 
+      * Cell phone access by using Telegram
 
 
 
@@ -65,7 +68,7 @@ CompetitionOpenSince[Month/Year] - gives the approximate year and month of the t
 
 # 3. PROJECT MANAGEMENT METHOD
 
-The management method used for this project was the CRISP-DM, which is a cyclic developing method focused in deliver a solution as soon as possible and than improving it in the next cycles. 
+The management method used for this project was the CRISP-DM, which is a cyclic developing method focused on delivering a solution as soon as possible and then improving it in the next cycles. 
 
 The steps performed are as follows: 
 
@@ -77,7 +80,7 @@ The steps performed are as follows:
     * Changing data types and filling NA's based on business assumptions. 
 
 3. **Feature Engineering**
-    * Creating new features and raising hypothesis to understand the phenomenon that is being modeled and it's agents.
+    * Creating new features and raising hypotheses to understand the phenomenon that is being modeled and it's agents.
 
 4. **Data Filtering**
     * Filtering rows and columns that are not relevant to solve the problem.
@@ -87,7 +90,7 @@ The steps performed are as follows:
     * Selecting the most important features to the model.
 
 6. **Data Preparation**
-    * Preparing the data to be used for the machine learning model
+    * Preparing the data to be used for the machine learning model.
 
 7. **Feature Selection**
     * Selecting the most significant attributes to train the model.
@@ -141,7 +144,7 @@ To get real performance values for this models, it was applied cross-validation 
    
 According to the results, the best two models were Random Forest Regressor and XGBoost Regressor. As the XGBoost Regressor is a lighter model than the Random Forest and gives good results too, it was chosen to be the model to be used in production.
 
-For the hyperparameter fine tuning, it was used the random search strategy, because it's faster than the grid and bayesian search. Its performance increased as follows:
+For the hyperparameter fine tuning, the random search strategy was used, because it's faster than the grid and bayesian search. Its performance increased as follows:
 
 <div align="center">
    
@@ -209,3 +212,5 @@ The user needs to send a message to the bot with "/" followed by the store's num
 <p align="center">
   <img src="img/telegram.gif" alt="animated" />
 </p>
+
+
