@@ -86,7 +86,7 @@ The steps performed are as follows:
     * Filtering rows and columns that are not relevant to solve the problem.
 
 5. **Exploratory Data Analysis (EDA)**
-    * Validating the business hypothesis;
+    * Validating the business hypotheses;
     * Selecting the most important features to the model.
 
 6. **Data Preparation**
@@ -103,7 +103,7 @@ The steps performed are as follows:
     * Training the model.
 
 10. **Error Interpretation**
-    * Interpreting the erro's metrics (MAE, MAPE, RMSE and MPE) to convert to business language.
+    * Interpreting the error metrics (MAE, MAPE, RMSE and MPE) to convert to business language.
 
 11. **Deploy Model to Production**
     * Deploying the model to a cloud service to be available for the stakeholder to consult the results by a Telegram bot.
